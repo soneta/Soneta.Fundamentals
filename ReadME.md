@@ -20,6 +20,6 @@ Przykład wczytujący listę baz danych programu enova365 z pliku *Lista baz dan
 
 Przykład utworzenia nowego towaru oraz ustawienie niektórych jego właściwości.
 
-## *(F6) - Wydruk*
+## Examples\Wydruk.cs: *(F6) - Wydruk*
 
 Przykład wydruku przykładowego raportu REPX lub ASPX do PDF i zapisanie go w pliku na dysku.
