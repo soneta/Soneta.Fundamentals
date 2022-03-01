@@ -1,0 +1,115 @@
+﻿/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>pl-PL</Localization>
+///   <Version>20.2</Version>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private Soneta.Business.UI.DxReports.BusinessDataSource BusinessSource;
+        private Soneta.Business.UI.DxReports.Components.BusinessContext BusinessContext;
+        private Soneta.Business.UI.DxReports.BusinessDataSource BusinessSourceContext;
+        private System.Resources.ResourceManager _resources;
+        public XtraReport() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager("zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA");
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.BusinessSource = new Soneta.Business.UI.DxReports.BusinessDataSource();
+            this.BusinessContext = new Soneta.Business.UI.DxReports.Components.BusinessContext();
+            this.BusinessSourceContext = new Soneta.Business.UI.DxReports.BusinessDataSource();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // TopMargin
+            // 
+            this.TopMargin.Dpi = 254F;
+            this.TopMargin.HeightF = 254F;
+            this.TopMargin.Name = "TopMargin";
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label1});
+            this.Detail.Dpi = 254F;
+            this.Detail.HeightF = 254F;
+            this.Detail.Name = "Detail";
+            this.Detail.Scripts.OnBeforePrint = "DoBeforePrint";
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Dpi = 254F;
+            this.BottomMargin.HeightF = 254F;
+            this.BottomMargin.Name = "BottomMargin";
+            // 
+            // label1
+            // 
+            this.label1.Dpi = 254F;
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(264.5833F, 66.14584F);
+            this.label1.Multiline = true;
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label1.SizeF = new System.Drawing.SizeF(1124.479F, 58.42001F);
+            this.label1.Text = "PUSTY WYDRUK TESTOWY + OnBeforePrint";
+            // 
+            // BusinessSource
+            // 
+            this.BusinessSource.DataKind = Soneta.Business.UI.DxReports.BusinessDataKind.CurrentList;
+            this.BusinessSource.DesignDataTypeName = "Towar";
+            this.BusinessSource.Name = "BusinessSource";
+            // 
+            // BusinessContext
+            // 
+            this.BusinessContext.Name = "BusinessContext";
+            this.BusinessContext.StylesSource = "standardowy";
+            // 
+            // BusinessSourceContext
+            // 
+            this.BusinessSourceContext.DataKind = Soneta.Business.UI.DxReports.BusinessDataKind.Context;
+            this.BusinessSourceContext.Name = "BusinessSourceContext";
+            // 
+            // XtraReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.TopMargin,
+                        this.Detail,
+                        this.BottomMargin});
+            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
+                        this.BusinessSource,
+                        this.BusinessContext,
+                        this.BusinessSourceContext});
+            this.DataSource = this.BusinessSourceContext;
+            this.DesignerOptions.ShowExportWarnings = false;
+            this.DisplayName = "Pusty";
+            this.Dpi = 254F;
+            this.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Margins = new System.Drawing.Printing.Margins(254, 254, 254, 254);
+            this.Name = "XtraReport";
+            this.PageHeight = 2970;
+            this.PageWidth = 2100;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
+            this.ScriptsSource = "void DoBeforePrint(object _, PrintEventArgs __)\r\n{\r\n\t//throw new Exception(\"On Be" +
+                "fore Print Exc\");\r\n\tConsole.WriteLine(\"REPX On Before Print\");\r\n\tSystem.Threadin" +
+                "g.Thread.Sleep(3000);\r\n}\r\n";
+            this.SnapGridSize = 25F;
+            this.Version = "20.2";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
