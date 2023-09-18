@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project  Sdk="Soneta.Sdk">
   <PropertyGroup>
 	  <OutputType>Exe</OutputType>
-	  <TargetFramework>net472</TargetFramework>
+	  <TargetFramework>net6</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Composition" Version="4.6.0" />	
-    <PackageReference Include="Soneta.Products.Modules" Version="2112.4.6" PrivateAssets="all" ExcludeAssets="runtime" />
-    <PackageReference Include="Soneta.Start" Version="2112.4.6" />
+    <PackageReference Include="Soneta.Start" Version="2306.1.5-net" />
+	<PackageReference Include="System.ComponentModel.Composition" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Reports\dummy.aspx">

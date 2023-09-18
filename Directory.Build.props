@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SonetaPackageVersion>2306.1.5-net</SonetaPackageVersion>
+    <SonetaTargetFramework>net6</SonetaTargetFramework>
+	<SonetaTestTargetFramework>net6</SonetaTestTargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AggregateOutput>true</AggregateOutput>
+  </PropertyGroup>
+  <PropertyGroup>
+	<Version>2306.1.1.0</Version>
+    <Copyright>Copyright (C) Soneta sp z o.o. 2002-2023.</Copyright>
+    <Description>Przykład programu exe</Description>
+    <AssemblyTitle>Soneta Soneta.Fundamentals</AssemblyTitle>
+    <Authors>$(Product)</Authors>
+  </PropertyGroup>
+</Project>
