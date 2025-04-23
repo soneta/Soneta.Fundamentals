@@ -57,6 +57,7 @@ namespace Soneta.Fundamentals
             }
         }
 
+        private IDisposable SessionStateDisposable;
         private Login _login;
 
         internal Login Login => _login;
@@ -65,6 +66,7 @@ namespace Soneta.Fundamentals
         {
             if (_login == null) {
                 try {
+                    SessionStateDisposable = SessionState.Create().Attach();
                     _login = Db.Login(false, user, pwd);
                     Console.WriteLine("Poprawnie zalogowano do bazy");
                 }
@@ -86,6 +88,8 @@ namespace Soneta.Fundamentals
             {
                 _login.Database.Dispose();
                 _login.Dispose();
+
+                SessionStateDisposable?.Dispose();
             }
             //CoreTools.FinishApplication();
         }
